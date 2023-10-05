@@ -1,77 +1,119 @@
-// HMR ->Hot Module Replacement
-// FWA->File Watcher Algorithm
-// written in C++
-// pracel cache
-
-// parcel
-// minifies the code
-// cleans the code
-// Dev and production build
-//  super fast build algorithms
-// Image Optimization
-// Cashing by Development
-// Compresses the files as well
-// Compatible with older version of browsers
-// HTTPS on dev machine
-// parcel manages the port number as well
-// we should put parcel.cache in our gitignore-->because anything  which wwe can generate in  browser we should keep that in gitignore
-// parcel uses consistent  hashing algorithm
-// Zero config
-// Transitive Dependency
-// creates a server for you
-// Tree shaking -->removing unwanted code/exports
-
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-const heading1 = //react element
-  (
-    <h1 id="heading1" key="h1">
-      First Heading
-    </h1>
-  );
-
-const Heading2 = () => {
+// header
+const Title = () => {
   return (
-    <h1 id="heading1" key="h1">
-      First Heading
-    </h1>
+    <img
+      src="https://files.yappe.in/place/full/food-villa-family-restaurant-hotel-4642683.webp"
+      alt="FoodVilla"
+      className="Logo"
+    />
   );
-}; //react element
-
-// Name of the functional Component name in capital letter
-// is it mandatory? No
-// it is just a normal convention
-// functional component is a normal function returning some piece of jsx
-
-
-// component composition
-const HeaderComponent = () => {
+};
+const Header = () => {
   return (
-    <div>
-      {heading1}
-      <Heading2 />
-      {Heading2()}
-      <h1>Namaste React Functional Component</h1>
-      <h2>Namaste React functional Component</h2>
+    <div className="header">
+      <Title />
+      <div className="navitems">
+        <ul>
+          <li>Home</li>
+          <li>About Us</li>
+          <li>Contacts</li>
+          <li>Cart</li>
+        </ul>
+      </div>
     </div>
   );
 };
 
-// JSX==> React.createElement==> object ==>HTMLDOM
+const RestauranList = [{
+  name: "KFC",
+  image:
+    "https://b.zmtcdn.com/data/pictures/chains/1/18740971/53a96bd95a58594f3d783df84b281c7c_o2_featured_v2.jpg?output-format=webp",
+  cusines: ["Burger", "Fast Food", "Biryani"],
+  rating: "4.3",
+},{
+  name: "Burger King",
+  image:
+    "https://b.zmtcdn.com/data/pictures/chains/1/18740971/53a96bd95a58594f3d783df84b281c7c_o2_featured_v2.jpg?output-format=webp",
+  cusines: ["Burger", "Fast Food", "Biryani"],
+  rating: "4.5",
+},{
+  name: "Pizza Hut",
+  image:
+    "https://b.zmtcdn.com/data/pictures/chains/1/18740971/53a96bd95a58594f3d783df84b281c7c_o2_featured_v2.jpg?output-format=webp",
+  cusines: ["Burger", "Fast Food", "Biryani"],
+  rating: "4.0",
+},{
+  name: "KFC",
+  image:
+    "https://b.zmtcdn.com/data/pictures/chains/1/18740971/53a96bd95a58594f3d783df84b281c7c_o2_featured_v2.jpg?output-format=webp",
+  cusines: ["Burger", "Fast Food", "Biryani"],
+  rating: "4.3",
+},{
+  name: "KFC",
+  image:
+    "https://b.zmtcdn.com/data/pictures/chains/1/18740971/53a96bd95a58594f3d783df84b281c7c_o2_featured_v2.jpg?output-format=webp",
+  cusines: ["Burger", "Fast Food", "Biryani"],
+  rating: "4.3",
+},{
+  name: "KFC",
+  image:
+    "https://b.zmtcdn.com/data/pictures/chains/1/18740971/53a96bd95a58594f3d783df84b281c7c_o2_featured_v2.jpg?output-format=webp",
+  cusines: ["Burger", "Fast Food", "Biryani"],
+  rating: "4.3",
+},{
+  name: "KFC",
+  image:
+    "https://b.zmtcdn.com/data/pictures/chains/1/18740971/53a96bd95a58594f3d783df84b281c7c_o2_featured_v2.jpg?output-format=webp",
+  cusines: ["Burger", "Fast Food", "Biryani"],
+  rating: "4.3",
+}];
+
+const RestaurantCard = () => {
+  return (
+    <div className="card">
+      <div>
+      <img src={RestauranList[1].image} />
+      <h3>{RestauranList[1].name}</h3>
+      <h4>{RestauranList[1].cusines.join(", ")}</h4>
+      <h4>{RestauranList[1].rating} stars</h4>
+      </div>
+    </div>
+  );
+};
+
+const Body = () => {
+  return (
+    <div className="cards">
+      <RestaurantCard />
+      <RestaurantCard />
+      <RestaurantCard />
+      <RestaurantCard />
+      <RestaurantCard />
+      <RestaurantCard />
+      <RestaurantCard />
+      <RestaurantCard />
+      <RestaurantCard />
+      <RestaurantCard />
+    </div>
+  );
+};
+const Footer = () => {
+  return <h4>Footer</h4>;
+};
+
+const AppLayout = () => {
+  return (
+    <React.Fragment>
+      <Header />
+      <Body />
+      <Footer />
+    </React.Fragment>
+  );
+};
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-// React.createElement ==>givves us an object==>HTML DOM
-// object is the one that is converted into html and puts it upon dom
-// pasing a react element inside the root
-
-// async defer
-root.render(heading1);
-
-// Components in react
-// 1=Functional based Component--new way of writing code
-// 2=Class based components--old way of writing code
-
-// Rendering a fucntional component
-root.render(<HeaderComponent />);
+root.render(<AppLayout />);

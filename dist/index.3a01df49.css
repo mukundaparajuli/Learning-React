@@ -1,5 +1,39 @@
-#root {
-  background-color: #ff0;
+.header {
+  border: 1px solid #000;
+  justify-content: space-between;
+  margin: 12px;
+  display: flex;
+}
+
+.navitems ul {
+  justify-content: space-between;
+  list-style: none;
+  display: flex;
+}
+
+.navitems ul li {
+  padding: 20px;
+}
+
+.Logo {
+  width: 150px;
+}
+
+.card {
+  border: 1px solid #000;
+  width: 200px;
+  margin: 12px;
+  padding: 20px;
+}
+
+.card img {
+  width: 100%;
+}
+
+.cards {
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  display: flex;
 }
 
 /*# sourceMappingURL=index.3a01df49.css.map */
