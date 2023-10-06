@@ -7,21 +7,22 @@
 
 .navitems ul {
   justify-content: space-between;
+  align-items: center;
   list-style: none;
   display: flex;
 }
 
 .navitems ul li {
-  padding: 20px;
+  padding: 18px;
 }
 
 .Logo {
-  width: 150px;
+  width: 130px;
 }
 
 .card {
   border: 1px solid #000;
-  width: 200px;
+  width: 20%;
   margin: 12px;
   padding: 20px;
 }

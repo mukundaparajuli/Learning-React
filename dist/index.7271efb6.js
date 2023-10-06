@@ -142,13 +142,13 @@
       this[globalName] = mainExports;
     }
   }
-})({"cIuSe":[function(require,module,exports) {
+})({"hcwwj":[function(require,module,exports) {
 var global = arguments[3];
 var HMR_HOST = null;
 var HMR_PORT = null;
 var HMR_SECURE = false;
 var HMR_ENV_HASH = "d6ea1d42532a7575";
-module.bundle.HMR_BUNDLE_ID = "f8a609f57826abd7";
+module.bundle.HMR_BUNDLE_ID = "7fb4cd117271efb6";
 "use strict";
 /* global HMR_HOST, HMR_PORT, HMR_ENV_HASH, HMR_SECURE, chrome, browser, __parcel__import__, __parcel__importScripts__, ServiceWorkerGlobalScope */ /*::
 import type {
@@ -2934,11 +2934,11 @@ process.umask = function() {
     return 0;
 };
 
-},{}],"2Ew96":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$c1db = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+},{}],"2kQhy":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$f00f = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$c1db.prelude(module);
+$parcel$ReactRefreshHelpers$f00f.prelude(module);
 
 try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
@@ -2947,261 +2947,57 @@ var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 var _client = require("react-dom/client");
 var _clientDefault = parcelHelpers.interopDefault(_client);
-// importing by default
-var _headerJs = require("./src/components/Header.js");
-var _headerJsDefault = parcelHelpers.interopDefault(_headerJs);
-// header
-const RestauranList = [
-    {
-        name: "KFC",
-        image: "https://b.zmtcdn.com/data/pictures/chains/1/18740971/53a96bd95a58594f3d783df84b281c7c_o2_featured_v2.jpg?output-format=webp",
-        cuisines: [
-            "Burger",
-            "Fast Food",
-            "Biryani"
-        ],
-        rating: "4.3"
-    },
-    {
-        name: "Burger King",
-        image: "https://fmdadmin.foodmandu.com//Images/Vendor/326/Logo/1_151222080829._workshop-eatery-web.listing.jpg",
-        cuisines: [
-            "Burger",
-            "Fast Food",
-            "Biryani"
-        ],
-        rating: "4.5"
-    },
-    {
-        name: "Pizza Hut",
-        image: "https://fmdadmin.foodmandu.com//Images/Vendor/269/Logo/2_151222080951._fire-and-ice-web.listing.jpg",
-        cuisines: [
-            "Burger",
-            "Fast Food",
-            "Biryani"
-        ],
-        rating: "4.0"
-    },
-    {
-        name: "Narayan Dai Ko Mo:Mo:",
-        image: "https://fmdadmin.foodmandu.com//Images/Vendor/232/Logo/7_151222081350._le-trio-web.listing.jpg",
-        cuisines: [
-            "Chiken Momo",
-            "Buff Mo:Mo:",
-            "Biryani"
-        ],
-        rating: "4.7"
-    },
-    {
-        name: "KKFC",
-        image: "https://b.zmtcdn.com/data/pictures/chains/1/18740971/53a96bd95a58594f3d783df84b281c7c_o2_featured_v2.jpg?output-format=webp",
-        cuisines: [
-            "Burger",
-            "Fast Food",
-            "Biryani"
-        ],
-        rating: "4.2"
-    },
-    {
-        name: "Dota",
-        image: "https://b.zmtcdn.com/data/pictures/chains/1/18740971/53a96bd95a58594f3d783df84b281c7c_o2_featured_v2.jpg?output-format=webp",
-        cuisines: [
-            "MoMO",
-            "Pizza",
-            "Biryani"
-        ],
-        rating: "4.6"
-    },
-    {
-        name: "KKFC",
-        image: "https://b.zmtcdn.com/data/pictures/chains/1/18740971/53a96bd95a58594f3d783df84b281c7c_o2_featured_v2.jpg?output-format=webp",
-        cuisines: [
-            "Burger",
-            "Fast Food",
-            "Biryani"
-        ],
-        rating: "4.2"
-    },
-    {
-        name: "KKFC",
-        image: "https://b.zmtcdn.com/data/pictures/chains/1/18740971/53a96bd95a58594f3d783df84b281c7c_o2_featured_v2.jpg?output-format=webp",
-        cuisines: [
-            "Burger",
-            "Fast Food",
-            "Biryani"
-        ],
-        rating: "4.2"
-    },
-    {
-        name: "KKFC",
-        image: "https://b.zmtcdn.com/data/pictures/chains/1/18740971/53a96bd95a58594f3d783df84b281c7c_o2_featured_v2.jpg?output-format=webp",
-        cuisines: [
-            "Burger",
-            "Fast Food",
-            "Biryani"
-        ],
-        rating: "4.2"
-    },
-    {
-        name: "KKFC",
-        image: "https://b.zmtcdn.com/data/pictures/chains/1/18740971/53a96bd95a58594f3d783df84b281c7c_o2_featured_v2.jpg?output-format=webp",
-        cuisines: [
-            "Burger",
-            "Fast Food",
-            "Biryani"
-        ],
-        rating: "4.2"
-    },
-    {
-        name: "KKFC",
-        image: "https://b.zmtcdn.com/data/pictures/chains/1/18740971/53a96bd95a58594f3d783df84b281c7c_o2_featured_v2.jpg?output-format=webp",
-        cuisines: [
-            "Burger",
-            "Fast Food",
-            "Biryani"
-        ],
-        rating: "4.2"
-    },
-    {
-        name: "KKFC",
-        image: "https://b.zmtcdn.com/data/pictures/chains/1/18740971/53a96bd95a58594f3d783df84b281c7c_o2_featured_v2.jpg?output-format=webp",
-        cuisines: [
-            "Burger",
-            "Fast Food",
-            "Biryani"
-        ],
-        rating: "4.2"
-    }
-];
-const RestaurantCard = ({ image, name, cuisines, rating })=>{
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "card",
-        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-            children: [
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                    src: image
-                }, void 0, false, {
-                    fileName: "App.js",
-                    lineNumber: 78,
-                    columnNumber: 9
-                }, undefined),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
-                    children: name
-                }, void 0, false, {
-                    fileName: "App.js",
-                    lineNumber: 79,
-                    columnNumber: 9
-                }, undefined),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
-                    children: cuisines.join(", ")
-                }, void 0, false, {
-                    fileName: "App.js",
-                    lineNumber: 80,
-                    columnNumber: 9
-                }, undefined),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
-                    children: [
-                        rating,
-                        " stars"
-                    ]
-                }, void 0, true, {
-                    fileName: "App.js",
-                    lineNumber: 81,
-                    columnNumber: 9
-                }, undefined)
-            ]
-        }, void 0, true, {
-            fileName: "App.js",
-            lineNumber: 77,
-            columnNumber: 7
-        }, undefined)
-    }, void 0, false, {
-        fileName: "App.js",
-        lineNumber: 76,
-        columnNumber: 10
-    }, undefined);
-};
-_c = RestaurantCard;
-const Body = ()=>{
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "cards",
-        children: RestauranList.map((restaurant, index)=>{
-            return /*#__PURE__*/ (0, _react.createElement)(RestaurantCard, {
-                ...restaurant,
-                key: index,
-                __source: {
-                    fileName: "App.js",
-                    lineNumber: 88,
-                    columnNumber: 14
-                },
-                __self: undefined
-            });
-        })
-    }, void 0, false, {
-        fileName: "App.js",
-        lineNumber: 86,
-        columnNumber: 10
-    }, undefined);
-};
-_c1 = Body;
-const Footer = ()=>{
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
-        children: "Footer"
-    }, void 0, false, {
-        fileName: "App.js",
-        lineNumber: 93,
-        columnNumber: 10
-    }, undefined);
-};
-_c2 = Footer;
+var _header = require("./components/Header");
+var _headerDefault = parcelHelpers.interopDefault(_header);
+var _body = require("./components/Body");
+var _bodyDefault = parcelHelpers.interopDefault(_body);
+var _footer = require("./components/Footer");
+var _footerDefault = parcelHelpers.interopDefault(_footer);
 const AppLayout = ()=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactDefault.default).Fragment, {
         children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _headerJsDefault.default), {}, void 0, false, {
-                fileName: "App.js",
-                lineNumber: 97,
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _headerDefault.default), {}, void 0, false, {
+                fileName: "src/App.js",
+                lineNumber: 8,
                 columnNumber: 7
             }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Body, {}, void 0, false, {
-                fileName: "App.js",
-                lineNumber: 98,
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _bodyDefault.default), {}, void 0, false, {
+                fileName: "src/App.js",
+                lineNumber: 9,
                 columnNumber: 7
             }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Footer, {}, void 0, false, {
-                fileName: "App.js",
-                lineNumber: 99,
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _footerDefault.default), {}, void 0, false, {
+                fileName: "src/App.js",
+                lineNumber: 10,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
-        fileName: "App.js",
-        lineNumber: 96,
+        fileName: "src/App.js",
+        lineNumber: 7,
         columnNumber: 10
     }, undefined);
 };
-_c3 = AppLayout;
+_c = AppLayout;
 const root = (0, _clientDefault.default).createRoot(document.getElementById("root"));
 root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(AppLayout, {}, void 0, false, {
-    fileName: "App.js",
-    lineNumber: 103,
+    fileName: "src/App.js",
+    lineNumber: 14,
     columnNumber: 13
 }, undefined)); // Reconciliation ==>algorithm to find  out  the  diff betn  your trees and your actual dom and virtual dom
  // diff algorithm==finds out the difference betn the tree
  // React fiber==> Reconciliation engine==>Responsible for diff
  // why dont we use index as a key
  // what does it mean to destructure the data
-var _c, _c1, _c2, _c3;
-$RefreshReg$(_c, "RestaurantCard");
-$RefreshReg$(_c1, "Body");
-$RefreshReg$(_c2, "Footer");
-$RefreshReg$(_c3, "AppLayout");
+var _c;
+$RefreshReg$(_c, "AppLayout");
 
-  $parcel$ReactRefreshHelpers$c1db.postlude(module);
+  $parcel$ReactRefreshHelpers$f00f.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-dom/client":"lOjBx","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./src/components/Header.js":"hsJbF"}],"iTorj":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-dom/client":"lOjBx","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./components/Header":"hsJbF","./components/Body":"8yaV8","./components/Footer":"8pPOA"}],"iTorj":[function(require,module,exports) {
 "use strict";
 module.exports = require("ee51401569654d91");
 
@@ -27583,7 +27379,7 @@ const Header = ()=>{
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Title, {}, void 0, false, {
                 fileName: "src/components/Header.js",
                 lineNumber: 6,
-                columnNumber: 9
+                columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 className: "navitems",
@@ -27594,39 +27390,39 @@ const Header = ()=>{
                         }, void 0, false, {
                             fileName: "src/components/Header.js",
                             lineNumber: 9,
-                            columnNumber: 13
+                            columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
                             children: "About Us"
                         }, void 0, false, {
                             fileName: "src/components/Header.js",
                             lineNumber: 10,
-                            columnNumber: 13
+                            columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
                             children: "Contacts"
                         }, void 0, false, {
                             fileName: "src/components/Header.js",
                             lineNumber: 11,
-                            columnNumber: 13
+                            columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
                             children: "Cart"
                         }, void 0, false, {
                             fileName: "src/components/Header.js",
                             lineNumber: 12,
-                            columnNumber: 13
+                            columnNumber: 11
                         }, undefined)
                     ]
                 }, void 0, true, {
                     fileName: "src/components/Header.js",
                     lineNumber: 8,
-                    columnNumber: 11
+                    columnNumber: 9
                 }, undefined)
             }, void 0, false, {
                 fileName: "src/components/Header.js",
                 lineNumber: 7,
-                columnNumber: 9
+                columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
@@ -27648,6 +27444,323 @@ $RefreshReg$(_c1, "Header");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}]},["cIuSe","1xC6H","2Ew96"], "2Ew96", "parcelRequire164e")
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"8yaV8":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$0606 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$0606.prelude(module);
 
-//# sourceMappingURL=index.7826abd7.js.map
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _config = require("./Config");
+var _restaurantCard = require("./RestaurantCard");
+var _restaurantCardDefault = parcelHelpers.interopDefault(_restaurantCard);
+var _s = $RefreshSig$();
+// what are hooks?
+// what is useState?
+// what is state?
+const Body = ()=>{
+    _s();
+    //   searchtext is a local state variable
+    //   useState hook returns an array
+    const [searchText, setSearchText] = (0, _react.useState)("Burger King"); //to create state variable
+    const [searchClick, setSearchClick] = (0, _react.useState)(false);
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "searchContainer",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                        type: "text",
+                        className: "search",
+                        placeholder: "Search",
+                        value: searchText,
+                        onChange: (e)=>{
+                            // e.target.value==>whatever you type in search box
+                            setSearchText(e.target.value);
+                        }
+                    }, void 0, false, {
+                        fileName: "src/components/Body.js",
+                        lineNumber: 17,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                        className: "searchBtn",
+                        onClick: ()=>{
+                            setSearchClick(true);
+                        },
+                        children: "Search"
+                    }, void 0, false, {
+                        fileName: "src/components/Body.js",
+                        lineNumber: 21,
+                        columnNumber: 9
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/Body.js",
+                lineNumber: 16,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "cards",
+                children: (0, _config.RestauranList).map((restaurant, index)=>{
+                    return /*#__PURE__*/ (0, _react.createElement)((0, _restaurantCardDefault.default), {
+                        ...restaurant,
+                        key: index,
+                        __source: {
+                            fileName: "src/components/Body.js",
+                            lineNumber: 27,
+                            columnNumber: 16
+                        },
+                        __self: undefined
+                    });
+                })
+            }, void 0, false, {
+                fileName: "src/components/Body.js",
+                lineNumber: 25,
+                columnNumber: 7
+            }, undefined)
+        ]
+    }, void 0, true);
+};
+_s(Body, "dgQWnwGYs+B71PFxFa8b121CI3U=");
+_c = Body;
+exports.default = Body;
+var _c;
+$RefreshReg$(_c, "Body");
+
+  $parcel$ReactRefreshHelpers$0606.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./Config":"4dy05","./RestaurantCard":"bMboU"}],"4dy05":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "RestauranList", ()=>RestauranList);
+const RestauranList = [
+    {
+        name: "KFC",
+        image: "https://b.zmtcdn.com/data/pictures/chains/1/18740971/53a96bd95a58594f3d783df84b281c7c_o2_featured_v2.jpg?output-format=webp",
+        cuisines: [
+            "Burger",
+            "Fast Food",
+            "Biryani"
+        ],
+        rating: "4.3"
+    },
+    {
+        name: "Burger King",
+        image: "https://fmdadmin.foodmandu.com//Images/Vendor/326/Logo/1_151222080829._workshop-eatery-web.listing.jpg",
+        cuisines: [
+            "Burger",
+            "Fast Food",
+            "Biryani"
+        ],
+        rating: "4.5"
+    },
+    {
+        name: "Pizza Hut",
+        image: "https://fmdadmin.foodmandu.com//Images/Vendor/269/Logo/2_151222080951._fire-and-ice-web.listing.jpg",
+        cuisines: [
+            "Burger",
+            "Fast Food",
+            "Biryani"
+        ],
+        rating: "4.0"
+    },
+    {
+        name: "Narayan Dai Ko Mo:Mo:",
+        image: "https://fmdadmin.foodmandu.com//Images/Vendor/232/Logo/7_151222081350._le-trio-web.listing.jpg",
+        cuisines: [
+            "Chiken Momo",
+            "Buff Mo:Mo:",
+            "Biryani"
+        ],
+        rating: "4.7"
+    },
+    {
+        name: "KKFC",
+        image: "https://b.zmtcdn.com/data/pictures/chains/1/18740971/53a96bd95a58594f3d783df84b281c7c_o2_featured_v2.jpg?output-format=webp",
+        cuisines: [
+            "Burger",
+            "Fast Food",
+            "Biryani"
+        ],
+        rating: "4.2"
+    },
+    {
+        name: "Dota",
+        image: "https://b.zmtcdn.com/data/pictures/chains/1/18740971/53a96bd95a58594f3d783df84b281c7c_o2_featured_v2.jpg?output-format=webp",
+        cuisines: [
+            "MoMO",
+            "Pizza",
+            "Biryani"
+        ],
+        rating: "4.6"
+    },
+    {
+        name: "KKFC",
+        image: "https://b.zmtcdn.com/data/pictures/chains/1/18740971/53a96bd95a58594f3d783df84b281c7c_o2_featured_v2.jpg?output-format=webp",
+        cuisines: [
+            "Burger",
+            "Fast Food",
+            "Biryani"
+        ],
+        rating: "4.2"
+    },
+    {
+        name: "KKFC",
+        image: "https://b.zmtcdn.com/data/pictures/chains/1/18740971/53a96bd95a58594f3d783df84b281c7c_o2_featured_v2.jpg?output-format=webp",
+        cuisines: [
+            "Burger",
+            "Fast Food",
+            "Biryani"
+        ],
+        rating: "4.2"
+    },
+    {
+        name: "KKFC",
+        image: "https://b.zmtcdn.com/data/pictures/chains/1/18740971/53a96bd95a58594f3d783df84b281c7c_o2_featured_v2.jpg?output-format=webp",
+        cuisines: [
+            "Burger",
+            "Fast Food",
+            "Biryani"
+        ],
+        rating: "4.2"
+    },
+    {
+        name: "KKFC",
+        image: "https://b.zmtcdn.com/data/pictures/chains/1/18740971/53a96bd95a58594f3d783df84b281c7c_o2_featured_v2.jpg?output-format=webp",
+        cuisines: [
+            "Burger",
+            "Fast Food",
+            "Biryani"
+        ],
+        rating: "4.2"
+    },
+    {
+        name: "KKFC",
+        image: "https://b.zmtcdn.com/data/pictures/chains/1/18740971/53a96bd95a58594f3d783df84b281c7c_o2_featured_v2.jpg?output-format=webp",
+        cuisines: [
+            "Burger",
+            "Fast Food",
+            "Biryani"
+        ],
+        rating: "4.2"
+    },
+    {
+        name: "KKFC",
+        image: "https://b.zmtcdn.com/data/pictures/chains/1/18740971/53a96bd95a58594f3d783df84b281c7c_o2_featured_v2.jpg?output-format=webp",
+        cuisines: [
+            "Burger",
+            "Fast Food",
+            "Biryani"
+        ],
+        rating: "4.2"
+    }
+];
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"bMboU":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$ffb1 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$ffb1.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+const RestaurantCard = ({ image, name, cuisines, rating })=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "card",
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+            children: [
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                    src: image
+                }, void 0, false, {
+                    fileName: "src/components/RestaurantCard.js",
+                    lineNumber: 9,
+                    columnNumber: 11
+                }, undefined),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
+                    children: name
+                }, void 0, false, {
+                    fileName: "src/components/RestaurantCard.js",
+                    lineNumber: 10,
+                    columnNumber: 11
+                }, undefined),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
+                    children: cuisines.join(", ")
+                }, void 0, false, {
+                    fileName: "src/components/RestaurantCard.js",
+                    lineNumber: 11,
+                    columnNumber: 11
+                }, undefined),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
+                    children: [
+                        rating,
+                        " stars"
+                    ]
+                }, void 0, true, {
+                    fileName: "src/components/RestaurantCard.js",
+                    lineNumber: 12,
+                    columnNumber: 11
+                }, undefined)
+            ]
+        }, void 0, true, {
+            fileName: "src/components/RestaurantCard.js",
+            lineNumber: 8,
+            columnNumber: 9
+        }, undefined)
+    }, void 0, false, {
+        fileName: "src/components/RestaurantCard.js",
+        lineNumber: 7,
+        columnNumber: 10
+    }, undefined);
+};
+_c = RestaurantCard;
+exports.default = RestaurantCard;
+var _c;
+$RefreshReg$(_c, "RestaurantCard");
+
+  $parcel$ReactRefreshHelpers$ffb1.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"8pPOA":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$bc7c = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$bc7c.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+const Footer = ()=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
+        children: "Footer"
+    }, void 0, false, {
+        fileName: "src/components/Footer.js",
+        lineNumber: 2,
+        columnNumber: 10
+    }, undefined);
+};
+_c = Footer;
+exports.default = Footer;
+var _c;
+$RefreshReg$(_c, "Footer");
+
+  $parcel$ReactRefreshHelpers$bc7c.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}]},["hcwwj","1xC6H","2kQhy"], "2kQhy", "parcelRequire164e")
+
+//# sourceMappingURL=index.7271efb6.js.map
