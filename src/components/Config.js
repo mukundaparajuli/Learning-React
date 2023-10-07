@@ -1,4 +1,4 @@
-export const RestauranList = [
+export const RestaurantList = [
     {
       name: "KFC",
       image:

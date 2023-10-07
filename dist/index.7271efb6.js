@@ -2997,7 +2997,7 @@ $RefreshReg$(_c, "AppLayout");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-dom/client":"lOjBx","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./components/Header":"hsJbF","./components/Body":"8yaV8","./components/Footer":"8pPOA"}],"iTorj":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-dom/client":"lOjBx","./components/Header":"hsJbF","./components/Body":"8yaV8","./components/Footer":"8pPOA","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"iTorj":[function(require,module,exports) {
 "use strict";
 module.exports = require("ee51401569654d91");
 
@@ -27182,7 +27182,101 @@ module.exports = require("ef03b89c8fe2794e");
     /* global __REACT_DEVTOOLS_GLOBAL_HOOK__ */ if (typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ !== "undefined" && typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop === "function") __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop(new Error());
 })();
 
-},{}],"gkKU3":[function(require,module,exports) {
+},{}],"hsJbF":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$bfed = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$bfed.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+const Title = ()=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+        src: "https://files.yappe.in/place/full/food-villa-family-restaurant-hotel-4642683.webp",
+        alt: "FoodVilla",
+        className: "Logo"
+    }, void 0, false, {
+        fileName: "src/components/Header.js",
+        lineNumber: 2,
+        columnNumber: 10
+    }, undefined);
+};
+_c = Title;
+const Header = ()=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "header",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Title, {}, void 0, false, {
+                fileName: "src/components/Header.js",
+                lineNumber: 6,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "navitems",
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
+                    children: [
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                            children: "Home"
+                        }, void 0, false, {
+                            fileName: "src/components/Header.js",
+                            lineNumber: 9,
+                            columnNumber: 11
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                            children: "About Us"
+                        }, void 0, false, {
+                            fileName: "src/components/Header.js",
+                            lineNumber: 10,
+                            columnNumber: 11
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                            children: "Contacts"
+                        }, void 0, false, {
+                            fileName: "src/components/Header.js",
+                            lineNumber: 11,
+                            columnNumber: 11
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                            children: "Cart"
+                        }, void 0, false, {
+                            fileName: "src/components/Header.js",
+                            lineNumber: 12,
+                            columnNumber: 11
+                        }, undefined)
+                    ]
+                }, void 0, true, {
+                    fileName: "src/components/Header.js",
+                    lineNumber: 8,
+                    columnNumber: 9
+                }, undefined)
+            }, void 0, false, {
+                fileName: "src/components/Header.js",
+                lineNumber: 7,
+                columnNumber: 7
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "src/components/Header.js",
+        lineNumber: 5,
+        columnNumber: 10
+    }, undefined);
+};
+_c1 = Header;
+exports.default = Header; //   you can just export default only once
+ // exporting by default
+ // exporting by name
+var _c, _c1;
+$RefreshReg$(_c, "Title");
+$RefreshReg$(_c1, "Header");
+
+  $parcel$ReactRefreshHelpers$bfed.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"gkKU3":[function(require,module,exports) {
 exports.interopDefault = function(a) {
     return a && a.__esModule ? a : {
         default: a
@@ -27350,101 +27444,7 @@ function registerExportsForReactRefresh(module1) {
     }
 }
 
-},{"7422ead32dcc1e6b":"786KC"}],"hsJbF":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$bfed = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$bfed.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-const Title = ()=>{
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-        src: "https://files.yappe.in/place/full/food-villa-family-restaurant-hotel-4642683.webp",
-        alt: "FoodVilla",
-        className: "Logo"
-    }, void 0, false, {
-        fileName: "src/components/Header.js",
-        lineNumber: 2,
-        columnNumber: 10
-    }, undefined);
-};
-_c = Title;
-const Header = ()=>{
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "header",
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Title, {}, void 0, false, {
-                fileName: "src/components/Header.js",
-                lineNumber: 6,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "navitems",
-                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
-                    children: [
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                            children: "Home"
-                        }, void 0, false, {
-                            fileName: "src/components/Header.js",
-                            lineNumber: 9,
-                            columnNumber: 11
-                        }, undefined),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                            children: "About Us"
-                        }, void 0, false, {
-                            fileName: "src/components/Header.js",
-                            lineNumber: 10,
-                            columnNumber: 11
-                        }, undefined),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                            children: "Contacts"
-                        }, void 0, false, {
-                            fileName: "src/components/Header.js",
-                            lineNumber: 11,
-                            columnNumber: 11
-                        }, undefined),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                            children: "Cart"
-                        }, void 0, false, {
-                            fileName: "src/components/Header.js",
-                            lineNumber: 12,
-                            columnNumber: 11
-                        }, undefined)
-                    ]
-                }, void 0, true, {
-                    fileName: "src/components/Header.js",
-                    lineNumber: 8,
-                    columnNumber: 9
-                }, undefined)
-            }, void 0, false, {
-                fileName: "src/components/Header.js",
-                lineNumber: 7,
-                columnNumber: 7
-            }, undefined)
-        ]
-    }, void 0, true, {
-        fileName: "src/components/Header.js",
-        lineNumber: 5,
-        columnNumber: 10
-    }, undefined);
-};
-_c1 = Header;
-exports.default = Header; //   you can just export default only once
- // exporting by default
- // exporting by name
-var _c, _c1;
-$RefreshReg$(_c, "Title");
-$RefreshReg$(_c1, "Header");
-
-  $parcel$ReactRefreshHelpers$bfed.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"8yaV8":[function(require,module,exports) {
+},{"7422ead32dcc1e6b":"786KC"}],"8yaV8":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$0606 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -27462,12 +27462,16 @@ var _s = $RefreshSig$();
 // what are hooks?
 // what is useState?
 // what is state?
+function filterData(searchText, restaurants) {
+    const filteredData = restaurants.filter((restaurant)=>restaurant.name.includes(searchText));
+    return filteredData;
+}
 const Body = ()=>{
     _s();
     //   searchtext is a local state variable
     //   useState hook returns an array
-    const [searchText, setSearchText] = (0, _react.useState)("Burger King"); //to create state variable
-    const [searchClick, setSearchClick] = (0, _react.useState)(false);
+    const [searchText, setSearchText] = (0, _react.useState)("");
+    const [restaurant, setRestaurant] = (0, _react.useState)((0, _config.RestaurantList));
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -27479,40 +27483,42 @@ const Body = ()=>{
                         placeholder: "Search",
                         value: searchText,
                         onChange: (e)=>{
-                            // e.target.value==>whatever you type in search box
+                            //e.target.value==>whatever you type in search box
                             setSearchText(e.target.value);
                         }
                     }, void 0, false, {
                         fileName: "src/components/Body.js",
-                        lineNumber: 17,
+                        lineNumber: 20,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
                         className: "searchBtn",
                         onClick: ()=>{
-                            setSearchClick(true);
+                            const data = filterData(searchText, restaurant);
+                            setRestaurant(data);
+                            console.log(data);
                         },
                         children: "Search"
                     }, void 0, false, {
                         fileName: "src/components/Body.js",
-                        lineNumber: 21,
+                        lineNumber: 24,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/Body.js",
-                lineNumber: 16,
+                lineNumber: 19,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 className: "cards",
-                children: (0, _config.RestauranList).map((restaurant, index)=>{
+                children: restaurant.map((restaurant, index)=>{
                     return /*#__PURE__*/ (0, _react.createElement)((0, _restaurantCardDefault.default), {
                         ...restaurant,
                         key: index,
                         __source: {
                             fileName: "src/components/Body.js",
-                            lineNumber: 27,
+                            lineNumber: 34,
                             columnNumber: 16
                         },
                         __self: undefined
@@ -27520,13 +27526,13 @@ const Body = ()=>{
                 })
             }, void 0, false, {
                 fileName: "src/components/Body.js",
-                lineNumber: 25,
+                lineNumber: 32,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true);
 };
-_s(Body, "dgQWnwGYs+B71PFxFa8b121CI3U=");
+_s(Body, "1Nyk6IosdvQsTfHu3zGrFgHPBXs=");
 _c = Body;
 exports.default = Body;
 var _c;
@@ -27537,11 +27543,11 @@ $RefreshReg$(_c, "Body");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./Config":"4dy05","./RestaurantCard":"bMboU"}],"4dy05":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./Config":"4dy05","./RestaurantCard":"bMboU","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"4dy05":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "RestauranList", ()=>RestauranList);
-const RestauranList = [
+parcelHelpers.export(exports, "RestaurantList", ()=>RestaurantList);
+const RestaurantList = [
     {
         name: "KFC",
         image: "https://b.zmtcdn.com/data/pictures/chains/1/18740971/53a96bd95a58594f3d783df84b281c7c_o2_featured_v2.jpg?output-format=webp",
