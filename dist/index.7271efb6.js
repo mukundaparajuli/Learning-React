@@ -27192,6 +27192,8 @@ try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _s = $RefreshSig$();
 const Title = ()=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
         src: "https://files.yappe.in/place/full/food-villa-family-restaurant-hotel-4642683.webp",
@@ -27199,18 +27201,37 @@ const Title = ()=>{
         className: "Logo"
     }, void 0, false, {
         fileName: "src/components/Header.js",
-        lineNumber: 2,
+        lineNumber: 3,
         columnNumber: 10
     }, undefined);
 };
 _c = Title;
 const Header = ()=>{
+    _s();
+    const [title, setTitle] = (0, _react.useState)("FoodVilla");
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "header",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Title, {}, void 0, false, {
                 fileName: "src/components/Header.js",
-                lineNumber: 6,
+                lineNumber: 8,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                children: title
+            }, void 0, false, {
+                fileName: "src/components/Header.js",
+                lineNumber: 9,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                onClick: ()=>{
+                    setTitle("Mukunda");
+                },
+                children: "change the title"
+            }, void 0, false, {
+                fileName: "src/components/Header.js",
+                lineNumber: 10,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -27221,48 +27242,49 @@ const Header = ()=>{
                             children: "Home"
                         }, void 0, false, {
                             fileName: "src/components/Header.js",
-                            lineNumber: 9,
+                            lineNumber: 17,
                             columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
                             children: "About Us"
                         }, void 0, false, {
                             fileName: "src/components/Header.js",
-                            lineNumber: 10,
+                            lineNumber: 18,
                             columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
                             children: "Contacts"
                         }, void 0, false, {
                             fileName: "src/components/Header.js",
-                            lineNumber: 11,
+                            lineNumber: 19,
                             columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
                             children: "Cart"
                         }, void 0, false, {
                             fileName: "src/components/Header.js",
-                            lineNumber: 12,
+                            lineNumber: 20,
                             columnNumber: 11
                         }, undefined)
                     ]
                 }, void 0, true, {
                     fileName: "src/components/Header.js",
-                    lineNumber: 8,
+                    lineNumber: 16,
                     columnNumber: 9
                 }, undefined)
             }, void 0, false, {
                 fileName: "src/components/Header.js",
-                lineNumber: 7,
+                lineNumber: 15,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/components/Header.js",
-        lineNumber: 5,
+        lineNumber: 7,
         columnNumber: 10
     }, undefined);
 };
+_s(Header, "LaXESKVeM8W6+f3XCJQhGc3P2Z4=");
 _c1 = Header;
 exports.default = Header; //   you can just export default only once
  // exporting by default
@@ -27276,7 +27298,7 @@ $RefreshReg$(_c1, "Header");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"gkKU3":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"gkKU3":[function(require,module,exports) {
 exports.interopDefault = function(a) {
     return a && a.__esModule ? a : {
         default: a
@@ -27472,6 +27494,19 @@ const Body = ()=>{
     //   useState hook returns an array
     const [searchText, setSearchText] = (0, _react.useState)("");
     const [restaurant, setRestaurant] = (0, _react.useState)((0, _config.RestaurantList));
+    // Callback function and a dependency array is passed when a useEffect function is defined
+    // inside the dependency array we put nothing (leave empty) if we dont want to call the function even when the component rerenders
+    // but if we want to call the useEffect function at a specific time such as when the searchText changes we put searchText inside the array
+    // useEffect is called at a specific time
+    (0, _react.useEffect)(()=>{
+        getRestaurant();
+    }, []);
+    async function getRestaurant() {
+        const data = await fetch("https://www.swiggy.com/mapi/homepage/getCards?lat=30.3164945&lng=78.03219179999999");
+        const json = await data.json();
+        console.log(json);
+        setRestaurant(json?.data?.success?.cards[1]?.gridWidget?.gridElements?.infoWithStyle?.restaurants?.info);
+    }
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -27488,7 +27523,7 @@ const Body = ()=>{
                         }
                     }, void 0, false, {
                         fileName: "src/components/Body.js",
-                        lineNumber: 20,
+                        lineNumber: 35,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -27496,18 +27531,17 @@ const Body = ()=>{
                         onClick: ()=>{
                             const data = filterData(searchText, restaurant);
                             setRestaurant(data);
-                            console.log(data);
                         },
                         children: "Search"
                     }, void 0, false, {
                         fileName: "src/components/Body.js",
-                        lineNumber: 24,
+                        lineNumber: 40,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/Body.js",
-                lineNumber: 19,
+                lineNumber: 34,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -27518,7 +27552,7 @@ const Body = ()=>{
                         key: index,
                         __source: {
                             fileName: "src/components/Body.js",
-                            lineNumber: 34,
+                            lineNumber: 49,
                             columnNumber: 16
                         },
                         __self: undefined
@@ -27526,13 +27560,13 @@ const Body = ()=>{
                 })
             }, void 0, false, {
                 fileName: "src/components/Body.js",
-                lineNumber: 32,
+                lineNumber: 47,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true);
 };
-_s(Body, "1Nyk6IosdvQsTfHu3zGrFgHPBXs=");
+_s(Body, "18n67u1KPGz7I4wI0KhmQ4Ofe84=");
 _c = Body;
 exports.default = Body;
 var _c;
@@ -27619,7 +27653,7 @@ const RestaurantList = [
         rating: "4.2"
     },
     {
-        name: "KKFC",
+        name: "Burger",
         image: "https://b.zmtcdn.com/data/pictures/chains/1/18740971/53a96bd95a58594f3d783df84b281c7c_o2_featured_v2.jpg?output-format=webp",
         cuisines: [
             "Burger",
@@ -27639,7 +27673,7 @@ const RestaurantList = [
         rating: "4.2"
     },
     {
-        name: "KKFC",
+        name: "Burger",
         image: "https://b.zmtcdn.com/data/pictures/chains/1/18740971/53a96bd95a58594f3d783df84b281c7c_o2_featured_v2.jpg?output-format=webp",
         cuisines: [
             "Burger",
