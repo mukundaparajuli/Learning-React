@@ -1,10 +1,7 @@
+import React, { useState, useEffect } from "react";
 import { RestaurantList } from "./Config";
 import RestaurantCard from "./RestaurantCard";
-import { useState, useEffect } from "react";
-
-// what are hooks?
-// what is useState?
-// what is state?
+import Shimmer from "./Shimmerr";
 
 function filterData(searchText, restaurants) {
   const filteredData = restaurants.filter((restaurant) =>
@@ -14,28 +11,37 @@ function filterData(searchText, restaurants) {
 }
 
 const Body = () => {
-  //   searchtext is a local state variable
-  //   useState hook returns an array
   const [searchText, setSearchText] = useState("");
-  const [restaurant, setRestaurant] = useState(RestaurantList);
+  const [restaurants, setRestaurants] = useState([]);
 
-  // Callback function and a dependency array is passed when a useEffect function is defined
-  // inside the dependency array we put nothing (leave empty) if we dont want to call the function even when the component rerenders
-  // but if we want to call the useEffect function at a specific time such as when the searchText changes we put searchText inside the array
-  // useEffect is called at a specific time
-
-  useEffect(() => { 
-    getRestaurant();
-  }, []);
-
-  async function getRestaurant() {
-    const data = await fetch("https://www.swiggy.com/mapi/homepage/getCards?lat=30.3164945&lng=78.03219179999999");
-    const json = await data.json();
-    console.log(json);
-    setRestaurant(json?.data?.success?.cards[1]?.gridWidget?.gridElements?.infoWithStyle?.restaurants?.info)
+  async function getRestaurantData() {
+    try {
+      const response = await fetch(
+        "https://www.swiggy.com/dapi/restaurants/list/v5?lat=30.3164945&lng=78.03219179999999&collection=83637&tags=layout_CCS_Burger&sortBy=&filters=&type=rcv2&offset=0&page_type=null"
+      );
+      const data = await response.json();
+      console.log(data);
+      // console.log(data.data.cards[3].card.card.info);
+      if (data?.data?.cards[3]?.card?.card) {
+        setRestaurants(data?.data?.cards[3]?.card?.card)
+      } else {
+        console.error("Invalid API response format");
+      }
+    } catch (error) {
+      console.error("Error fetching restaurant data: ", error);
+    }
   }
 
-  return (
+  useEffect(() => {
+    getRestaurantData();
+  }, RestaurantList);
+
+  const handleSearch = () => {
+    const filteredData = filterData(searchText, RestaurantList);
+    setRestaurants(filteredData);
+  };
+
+  return (restaurants.length===0)?<Shimmer/>:(
     <>
       <div className="searchContainer">
         <input
@@ -43,26 +49,17 @@ const Body = () => {
           className="search"
           placeholder="Search"
           value={searchText}
-          onChange={(e) => {
-            //e.target.value==>whatever you type in search box
-            setSearchText(e.target.value);
-          }}
+          onChange={(e) => setSearchText(e.target.value)}
         />
-
-        <button
-          className="searchBtn"
-          onClick={() => {
-            const data = filterData(searchText, restaurant);
-            setRestaurant(data);
-          }}
-        >
+        <button className="searchBtn" onClick={handleSearch}>
           Search
         </button>
       </div>
       <div className="cards">
-        {restaurant.map((restaurant, index) => {
-          return <RestaurantCard {...restaurant} key={index} />;
-        })}
+        {console.log("Restaurant object:", restaurants)}
+        {/* {restaurants.map((restaurant, index) => ( */}
+          <RestaurantCard {...restaurants}  />
+        {/* ))} */}
       </div>
     </>
   );

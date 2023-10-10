@@ -38,3 +38,8 @@
     flex-wrap: wrap;
     justify-content: space-evenly;
 }
+.shimmer{
+    height: 250px;
+    width: 150px;
+    background-color: #DCDCDE;
+}

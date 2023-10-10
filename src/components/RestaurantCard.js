@@ -1,13 +1,17 @@
-const RestaurantCard = ({ image, name, cuisines, rating }) => {
-    return (
-      <div className="card">
-        <div>
-          <img src={image} />
-          <h3>{name}</h3>
-          <h4>{cuisines.join(", ")}</h4>
-          <h4>{rating} stars</h4>
-        </div>
+const RestaurantCard = ({ cloudinaryImageId, name, cuisines }) => {
+  return (
+    <div className="card">
+      <div>
+        <img
+          src={
+            "https://media-assets.swiggy.com/swiggy/image/upload/" +
+            {cloudinaryImageId }
+          }
+        />
+        <h3>{name}</h3>
+        <h4>{cuisines.join(", ")}</h4>
       </div>
-    );
-  };
-  export default RestaurantCard;
+    </div>
+  );
+};
+export default RestaurantCard;
