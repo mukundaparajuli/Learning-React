@@ -1,18 +1,23 @@
 import React, { useState, useEffect } from "react";
 import { RestaurantList } from "./Config";
 import RestaurantCard from "./RestaurantCard";
-import Shimmer from "./Shimmerr";
 
 function filterData(searchText, restaurants) {
-  const filteredData = restaurants.filter((restaurant) =>
-    restaurant.name.includes(searchText)
-  );
+  const filteredData = restaurants
+    .slice(3, 11)
+    .filter((restaurant) =>
+      restaurant?.card?.card?.info?.name
+        ?.toLowerCase()
+        .includes(searchText.toLowerCase())
+    );
+  console.log(filteredData);
   return filteredData;
 }
 
 const Body = () => {
   const [searchText, setSearchText] = useState("");
   const [restaurants, setRestaurants] = useState([]);
+  const [originalData, setOriginalData] = useState([]);
 
   async function getRestaurantData() {
     try {
@@ -20,13 +25,9 @@ const Body = () => {
         "https://www.swiggy.com/dapi/restaurants/list/v5?lat=30.3164945&lng=78.03219179999999&collection=83637&tags=layout_CCS_Burger&sortBy=&filters=&type=rcv2&offset=0&page_type=null"
       );
       const data = await response.json();
+      setOriginalData(data?.data?.cards);
+      setRestaurants(data?.data?.cards);
       console.log(data);
-      // console.log(data.data.cards[3].card.card.info);
-      if (data?.data?.cards[3]?.card?.card) {
-        setRestaurants(data?.data?.cards[3]?.card?.card)
-      } else {
-        console.error("Invalid API response format");
-      }
     } catch (error) {
       console.error("Error fetching restaurant data: ", error);
     }
@@ -34,14 +35,18 @@ const Body = () => {
 
   useEffect(() => {
     getRestaurantData();
-  }, RestaurantList);
+  }, []);
 
   const handleSearch = () => {
-    const filteredData = filterData(searchText, RestaurantList);
+    const filteredData = filterData(searchText, restaurants);
     setRestaurants(filteredData);
   };
+  const clear = () => {
+    setRestaurants(originalData);
+    setSearchText("");
+  };
 
-  return (restaurants.length===0)?<Shimmer/>:(
+  return (
     <>
       <div className="searchContainer">
         <input
@@ -54,15 +59,24 @@ const Body = () => {
         <button className="searchBtn" onClick={handleSearch}>
           Search
         </button>
+        <button className="clrBtn" onClick={clear}>
+          Clear
+        </button>
       </div>
+
       <div className="cards">
-        {console.log("Restaurant object:", restaurants)}
-        {/* {restaurants.map((restaurant, index) => ( */}
-          <RestaurantCard {...restaurants}  />
-        {/* ))} */}
+        {console.log(restaurants.length)}
+        {restaurants.length > 3
+          ? restaurants
+              .slice(3, 11)
+              .map((restaurant, index) => (
+                <RestaurantCard key={index} {...restaurant?.card?.card?.info} />
+              ))
+          : restaurants.map((restaurant, index) => (
+              <RestaurantCard key={index} {...restaurant?.card?.card?.info} />
+            ))}
       </div>
     </>
   );
 };
-
 export default Body;
