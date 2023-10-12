@@ -22,11 +22,11 @@
 }
 
 .card {
-    width: 200px;
+    width: 250px;
     border: 1px solid black;
     padding: 20px;
     margin: 12px;
-    width: 20%;
+
 }
 
 .card img {
@@ -38,8 +38,11 @@
     flex-wrap: wrap;
     justify-content: space-evenly;
 }
-.shimmer{
-    height: 250px;
-    width: 150px;
-    background-color: #DCDCDE;
+
+.shimmer {
+    height: 400px;
+    width: 250px;
+    margin: 12px;
+    background-color: rgb(191, 189, 189);
+
 }

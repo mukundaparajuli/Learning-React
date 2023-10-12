@@ -1,4 +1,6 @@
 const Shimmer = () => {
-  return (<div className="shimmer"></div>);
+  return Array(16)
+    .fill("")
+    .map((e, index) => <div className="shimmer" key={index}></div>);
 };
 export default Shimmer;

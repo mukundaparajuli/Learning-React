@@ -3,23 +3,48 @@ import ReactDOM from "react-dom/client";
 import Header from "./components/Header";
 import Body from "./components/Body";
 import Footer from "./components/Footer";
+import About from "./components/About";
+import Error from "./components/Error";
+import RestaurantMenu from "./components/RestaurantMenu";
+import { RouterProvider, createBrowserRouter, Outlet } from "react-router-dom";
+import Contacts from "./components/Contacts";
 
 const AppLayout = () => {
   return (
     <React.Fragment>
       <Header />
-      <Body />
+      {/* {outlet} */}
+      <Outlet />
       <Footer />
     </React.Fragment>
   );
 };
+const appRouter = createBrowserRouter([
+  {
+    path: "/",
+    element: <AppLayout />,
+    errorElement: <Error />,
+    children: [
+      {
+        path: "/about",
+        element: <About />,
+      },
+      {
+        path: "/",
+        element: <Body />,
+      },
+      {
+        path: "/contacts",
+        element: <Contacts />,
+      },
+      {
+        path: "/restaurans/:id",
+        element: <RestaurantMenu />,
+      },
+    ],
+  },
+]);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-root.render(<AppLayout />);
-
-// Reconciliation ==>algorithm to find  out  the  diff betn  your trees and your actual dom and virtual dom
-// diff algorithm==finds out the difference betn the tree
-// React fiber==> Reconciliation engine==>Responsible for diff
-// why dont we use index as a key
-// what does it mean to destructure the data
+root.render(<RouterProvider router={appRouter} />);

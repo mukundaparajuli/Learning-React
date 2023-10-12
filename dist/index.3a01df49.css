@@ -22,7 +22,7 @@
 
 .card {
   border: 1px solid #000;
-  width: 20%;
+  width: 250px;
   margin: 12px;
   padding: 20px;
 }
@@ -38,9 +38,10 @@
 }
 
 .shimmer {
-  background-color: #dcdcde;
-  width: 150px;
-  height: 250px;
+  background-color: #bfbdbd;
+  width: 250px;
+  height: 400px;
+  margin: 12px;
 }
 
 /*# sourceMappingURL=index.3a01df49.css.map */

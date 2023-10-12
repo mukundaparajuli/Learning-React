@@ -1,15 +1,12 @@
 import React, { useState, useEffect } from "react";
-import { RestaurantList } from "./Config";
 import RestaurantCard from "./RestaurantCard";
+import Shimmer from "./Shimmerr";
+
 
 function filterData(searchText, restaurants) {
-  const filteredData = restaurants
-    .slice(3, 11)
-    .filter((restaurant) =>
-      restaurant?.card?.card?.info?.name
-        ?.toLowerCase()
-        .includes(searchText.toLowerCase())
-    );
+  const filteredData = restaurants.filter((restaurant) =>
+    restaurant?.info?.name?.toLowerCase().includes(searchText.toLowerCase())
+  );
   console.log(filteredData);
   return filteredData;
 }
@@ -22,12 +19,17 @@ const Body = () => {
   async function getRestaurantData() {
     try {
       const response = await fetch(
-        "https://www.swiggy.com/dapi/restaurants/list/v5?lat=30.3164945&lng=78.03219179999999&collection=83637&tags=layout_CCS_Burger&sortBy=&filters=&type=rcv2&offset=0&page_type=null"
+        "https://www.swiggy.com/mapi/homepage/getCards?lat=30.3164945&lng=78.03219179999999&collection=83637&tags=layout_CCS_Burger&sortBy=&filters=&type=rcv2&offset=0&page_type=null"
       );
       const data = await response.json();
-      setOriginalData(data?.data?.cards);
-      setRestaurants(data?.data?.cards);
-      console.log(data);
+      setOriginalData(
+        data?.data?.success?.cards[1]?.gridWidget?.gridElements?.infoWithStyle
+          ?.restaurants
+      );
+      setRestaurants(
+        data?.data?.success?.cards[1]?.gridWidget?.gridElements?.infoWithStyle
+          ?.restaurants
+      );
     } catch (error) {
       console.error("Error fetching restaurant data: ", error);
     }
@@ -47,7 +49,7 @@ const Body = () => {
   };
 
   return (
-    <>
+    <div>
       <div className="searchContainer">
         <input
           type="text"
@@ -65,18 +67,15 @@ const Body = () => {
       </div>
 
       <div className="cards">
-        {console.log(restaurants.length)}
-        {restaurants.length > 3
-          ? restaurants
-              .slice(3, 11)
-              .map((restaurant, index) => (
-                <RestaurantCard key={index} {...restaurant?.card?.card?.info} />
-              ))
-          : restaurants.map((restaurant, index) => (
-              <RestaurantCard key={index} {...restaurant?.card?.card?.info} />
-            ))}
+        {restaurants.length == 0 ? (
+          <Shimmer />
+        ) : (
+          restaurants.map((restaurant, index) => (
+            <RestaurantCard key={index} {...restaurant?.info} />
+          ))
+        )}
       </div>
-    </>
+    </div>
   );
 };
 export default Body;
