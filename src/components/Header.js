@@ -41,6 +41,3 @@ const Header = () => {
   );
 };
 export default Header;
-//   you can just export default only once
-// exporting by default
-// exporting by name

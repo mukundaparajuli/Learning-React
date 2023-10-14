@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import RestaurantCard from "./RestaurantCard";
 import Shimmer from "./Shimmerr";
-
+import { Link } from "react-router-dom";
+import RestaurantMenu from "./RestaurantMenu";
 
 function filterData(searchText, restaurants) {
   const filteredData = restaurants.filter((restaurant) =>
@@ -19,15 +20,16 @@ const Body = () => {
   async function getRestaurantData() {
     try {
       const response = await fetch(
-        "https://www.swiggy.com/mapi/homepage/getCards?lat=30.3164945&lng=78.03219179999999&collection=83637&tags=layout_CCS_Burger&sortBy=&filters=&type=rcv2&offset=0&page_type=null"
+        "https://www.swiggy.com/dapi/restaurants/list/v5?lat=30.3164945&lng=78.03219179999999&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
+        // "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=21.1702401&lng=72.83106070000001&&submitAction=ENTER&restaurantId=223"
       );
       const data = await response.json();
       setOriginalData(
-        data?.data?.success?.cards[1]?.gridWidget?.gridElements?.infoWithStyle
+        data?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle
           ?.restaurants
       );
       setRestaurants(
-        data?.data?.success?.cards[1]?.gridWidget?.gridElements?.infoWithStyle
+        data?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle
           ?.restaurants
       );
     } catch (error) {
@@ -65,13 +67,18 @@ const Body = () => {
           Clear
         </button>
       </div>
-
+      {/* {console.log(restaurants)} */}
       <div className="cards">
         {restaurants.length == 0 ? (
           <Shimmer />
         ) : (
           restaurants.map((restaurant, index) => (
-            <RestaurantCard key={index} {...restaurant?.info} />
+            <Link
+              to={"/restaurant/" + restaurant.info.id}
+              key={restaurant.info.id}
+            >
+              <RestaurantCard key={index} {...restaurant?.info} />
+            </Link>
           ))
         )}
       </div>
