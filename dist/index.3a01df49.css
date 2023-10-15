@@ -8,12 +8,14 @@
 .navitems ul {
   justify-content: space-between;
   align-items: center;
+  text-decoration: none;
   list-style: none;
   display: flex;
 }
 
 .navitems ul li {
   padding: 18px;
+  text-decoration: none;
 }
 
 .Logo {
@@ -23,6 +25,7 @@
 .card {
   border: 1px solid #000;
   width: 250px;
+  height: 500px;
   margin: 12px;
   padding: 20px;
 }
@@ -39,9 +42,23 @@
 
 .shimmer {
   background-color: #bfbdbd;
-  width: 250px;
-  height: 400px;
-  margin: 12px;
+  width: 350px;
+  height: 500px;
+  margin: 20px;
+}
+
+.info {
+  justify-content: space-evenly;
+  align-items: center;
+  display: flex;
+}
+
+table, th, thead, tbody, tr, td {
+  border: 1px solid #000;
+}
+
+.restaurantCard {
+  text-decoration: none;
 }
 
 /*# sourceMappingURL=index.3a01df49.css.map */

@@ -1,3 +1,4 @@
+import { Outlet } from "react-router-dom";
 const About = () => {
   return (
     <div>
@@ -6,6 +7,7 @@ const About = () => {
         This is the Namaste Live Course on React. Today we are on the seventh
         chapter of our class and the name of the chapter is Finding the Path.
       </p>
+      <Outlet />
     </div>
   );
 };

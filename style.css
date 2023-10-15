@@ -11,10 +11,12 @@
     list-style: none;
     align-items: center;
     align-items: center;
+    text-decoration: none;
 }
 
 .navitems ul li {
     padding: 18px;
+    text-decoration: none;
 }
 
 .Logo {
@@ -26,6 +28,7 @@
     border: 1px solid black;
     padding: 20px;
     margin: 12px;
+    height: 500px;
 
 }
 
@@ -40,9 +43,28 @@
 }
 
 .shimmer {
-    height: 400px;
-    width: 250px;
-    margin: 12px;
+    height: 500px;
+    width: 350px;
+    margin: 20px;
     background-color: rgb(191, 189, 189);
 
+}
+
+.info {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+table,
+th,
+thead,
+tbody,
+tr,
+td {
+    border: 1px solid black;
+}
+
+.restaurantCard {
+    text-decoration: none;
 }
