@@ -2,15 +2,8 @@ import React, { useState, useEffect } from "react";
 import RestaurantCard from "./RestaurantCard";
 import Shimmer from "./Shimmerr";
 import { Link } from "react-router-dom";
-import RestaurantMenu from "./RestaurantMenu";
-
-function filterData(searchText, restaurants) {
-  const filteredData = restaurants.filter((restaurant) =>
-    restaurant?.info?.name?.toLowerCase().includes(searchText.toLowerCase())
-  );
-  console.log(filteredData);
-  return filteredData;
-}
+import { filterData } from "../utils/helper";
+import useOnline from "../utils/useOnline";
 
 const Body = () => {
   const [searchText, setSearchText] = useState("");
@@ -50,43 +43,53 @@ const Body = () => {
     setSearchText("");
   };
 
-  return (
-    <div>
-      <div className="searchContainer">
-        <input
-          type="text"
-          className="search"
-          placeholder="Search"
-          value={searchText}
-          onChange={(e) => setSearchText(e.target.value)}
-        />
-        <button className="searchBtn" onClick={handleSearch}>
-          Search
-        </button>
-        <button className="clrBtn" onClick={clear}>
-          Clear
-        </button>
+  const isOnline = useOnline();
+  if (!isOnline) {
+    return (
+      <div>
+        <h1>It seems you are offline.</h1>
+        <h1>Please check your Internet Connection.</h1>
       </div>
-      {/* {console.log(restaurants)} */}
-      <div className="cards">
-        {restaurants.length == 0 ? (
-          <Shimmer />
-        ) : (
-          restaurants.map((restaurant, index) => (
-            <Link
-              to={"/restaurant/" + restaurant.info.id}
-              key={restaurant.info.id}
-            >
-              <RestaurantCard
-                key={index}
-                {...restaurant?.info}
-                className="restaurantCard"
-              />
-            </Link>
-          ))
-        )}
+    );
+  } else {
+    return (
+      <div>
+        <div className="searchContainer">
+          <input
+            type="text"
+            className="search"
+            placeholder="Search"
+            value={searchText}
+            onChange={(e) => setSearchText(e.target.value)}
+          />
+          <button className="searchBtn" onClick={handleSearch}>
+            Search
+          </button>
+          <button className="clrBtn" onClick={clear}>
+            Clear
+          </button>
+        </div>
+        {/* {console.log(restaurants)} */}
+        <div className="cards">
+          {restaurants.length == 0 ? (
+            <Shimmer />
+          ) : (
+            restaurants.map((restaurant, index) => (
+              <Link
+                to={"/restaurant/" + restaurant.info.id}
+                key={restaurant.info.id}
+              >
+                <RestaurantCard
+                  key={index}
+                  {...restaurant?.info}
+                  className="restaurantCard"
+                />
+              </Link>
+            ))
+          )}
+        </div>
       </div>
-    </div>
-  );
+    );
+  }
 };
 export default Body;

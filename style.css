@@ -56,13 +56,18 @@
     align-items: center;
 }
 
-table,
-th,
-thead,
 tbody,
 tr,
+th,
+thead,
 td {
-    border: 1px solid black;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+table {
+    border-top: 4px solid black;
+    border-left: 4px solid black;
 }
 
 .restaurantCard {

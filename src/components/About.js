@@ -20,7 +20,8 @@ class About extends React.Component {
           This is the Namaste Live Course on React. Today we are on the seventh
           chapter of our class and the name of the chapter is Finding the Path.
         </p>
-        <ProfileClassComponent name={"First Child"} />
+        {/* <ProfileClassComponent name={"First Child"} /> */}
+        <ProfileFunctionalComponent />
       </div>
     );
   }

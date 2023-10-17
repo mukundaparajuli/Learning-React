@@ -11,12 +11,20 @@ class Profile extends React.Component {
     };
     console.log("Child-constructor " + this.props.name);
   }
-  async componentDidMount() {
-    const data = await fetch("https://api.github.com/users/mukundaparajuli");
-    const json = await data.json();
-    this.setState({
-      userInfo: json,
-    });
+  componentDidMount() {
+    this.timer = setInterval(() => {
+      console.log("componentDidMount");
+    }, 1000);
+  }
+  componentDidUpdate(prevProps, prevState) {
+    if (this.state.count !== prevProps) {
+      // anythigng that need to be done
+    }
+    console.log("Component did update");
+  }
+  componentWillUnmount() {
+    clearInterval(this.timer);
+    console.log("Component will unmount");
   }
   render() {
     console.log("Child-render " + this.props.name);

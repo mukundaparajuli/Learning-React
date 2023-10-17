@@ -53,8 +53,14 @@
   display: flex;
 }
 
-table, th, thead, tbody, tr, td {
-  border: 1px solid #000;
+tbody, tr, th, thead, td {
+  border-bottom: 1px solid #000;
+  border-right: 1px solid #000;
+}
+
+table {
+  border-top: 4px solid #000;
+  border-left: 4px solid #000;
 }
 
 .restaurantCard {

@@ -1,24 +1,12 @@
 import { useParams } from "react-router-dom";
 import { IMG_CDN_URL } from "../components/Config";
-import { useState, useEffect } from "react";
-import Shimmer from "./Shimmerr";
+import useRestaurantMenu from "../utils/useRestaurantmenu";
+// import { useState, useEffect } from "react";
+
 const RestaurantMenu = () => {
   const { resId } = useParams();
 
-  const [restaurant, setRestaurant] = useState(null);
-
-  useEffect(() => {
-    getRestaurantMenu();
-  }, []);
-
-  async function getRestaurantMenu() {
-    const response = await fetch(
-      `https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=21.1702401&lng=72.83106070000001&&submitAction=ENTER&restaurantId=${resId}`
-    );
-    const result = await response.json();
-    console.log(result);
-    setRestaurant(result);
-  }
+  const restaurant = useRestaurantMenu(resId);
 
   return (
     <div className="info">
@@ -50,7 +38,7 @@ const RestaurantMenu = () => {
               (items) => (
                 <tr>
                   <td key={items?.card?.info?.id}>{items?.card?.info?.name}</td>
-                  <td>Rs {items?.card?.info?.price}/- </td>
+                  <td>Rs {items?.card?.info?.price / 100}/- </td>
                 </tr>
               )
             )}
