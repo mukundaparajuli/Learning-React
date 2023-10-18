@@ -5,19 +5,20 @@
     border: 1px solid black;
 }
 
+.navitems ul a {
+    text-decoration: none;
+    color: black;
+    padding: 15px;
+}
+
 .navitems ul {
     display: flex;
     justify-content: space-between;
     list-style: none;
     align-items: center;
     align-items: center;
-    text-decoration: none;
 }
 
-.navitems ul li {
-    padding: 18px;
-    text-decoration: none;
-}
 
 .Logo {
     width: 130px;
@@ -25,11 +26,17 @@
 
 .card {
     width: 250px;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     padding: 20px;
     margin: 12px;
-    height: 500px;
+    height: 450px;
+    color: black;
+    text-decoration-line: none;
 
+}
+
+.card:hover {
+    box-shadow: 2px 2px 3px 3px grey;
 }
 
 .card img {
@@ -72,4 +79,9 @@ table {
 
 .restaurantCard {
     text-decoration: none;
+}
+
+.cardContent {
+    text-decoration: none;
+    color: black;
 }

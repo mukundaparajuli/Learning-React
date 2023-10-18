@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import { IMG_CDN_URL } from "../components/Config";
+import { IMG_CDN_URL } from "../Config";
 import useRestaurantMenu from "../utils/useRestaurantmenu";
 // import { useState, useEffect } from "react";
 

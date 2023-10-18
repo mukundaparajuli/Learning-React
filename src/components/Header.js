@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import Instamart from "./Instamart";
 
 const Title = () => {
   return (
@@ -31,6 +32,9 @@ const Header = () => {
           </Link>
           <Link to="">
             <li>Cart</li>
+          </Link>
+          <Link to="/instamart">
+            <li>Instamart</li>
           </Link>
         </ul>
       </div>

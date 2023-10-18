@@ -1,7 +1,12 @@
-import { IMG_CDN_URL } from "../components/Config";
+import { IMG_CDN_URL } from "../Config";
 const RestaurantCard = ({ cloudinaryImageId, name, cuisines, avgRating }) => {
   return (
-    <div className="card">
+    <div
+      className="card"
+      style={{
+        backgroundColor: "white",
+      }}
+    >
       <div>
         <img src={IMG_CDN_URL + cloudinaryImageId} />
         <h3>{name}</h3>
