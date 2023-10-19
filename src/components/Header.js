@@ -7,7 +7,7 @@ const Title = () => {
     <img
       src="https://files.yappe.in/place/full/food-villa-family-restaurant-hotel-4642683.webp"
       alt="FoodVilla"
-      className="Logo"
+      className="h-32 p-2 justify-center"
     />
   );
 };
@@ -17,24 +17,24 @@ const Header = () => {
     login == "Logged In" ? setLogin("Logged Out") : setLogin("Logged In");
   };
   return (
-    <div className="header">
+    <div className="flex justify-between bg-pink-100 shadow-lg h-32 sm:bg-blue-50 md:bg-yellow-200">
       <Title />
-      <div className="navitems">
-        <ul>
+      <div>
+        <ul className="px-10 py-16 flex">
           <Link to="/">
-            <li>Home</li>
+            <li className="px-2">Home</li>
           </Link>
           <Link to="/about">
-            <li>About Us</li>
+            <li className="px-2">About Us</li>
           </Link>
           <Link to="/contacts">
-            <li>Contacts</li>
+            <li className="px-2">Contacts</li>
           </Link>
           <Link to="">
-            <li>Cart</li>
+            <li className="px-2">Cart</li>
           </Link>
           <Link to="/instamart">
-            <li>Instamart</li>
+            <li className="px-2">Instamart</li>
           </Link>
         </ul>
       </div>

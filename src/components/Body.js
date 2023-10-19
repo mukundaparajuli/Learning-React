@@ -14,7 +14,6 @@ const Body = () => {
     try {
       const response = await fetch(
         "https://www.swiggy.com/dapi/restaurants/list/v5?lat=30.3164945&lng=78.03219179999999&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
-        // "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=21.1702401&lng=72.83106070000001&&submitAction=ENTER&restaurantId=223"
       );
       const data = await response.json();
       setOriginalData(
@@ -53,24 +52,30 @@ const Body = () => {
     );
   } else {
     return (
-      <div>
-        <div className="searchContainer">
+      <div className="bg-blue-100">
+        <div className="p-2 m-2 h-12 py-6">
           <input
             type="text"
-            className="search"
+            className="h-8 border-2 border-solid border-purple-900"
             placeholder="Search"
             value={searchText}
             onChange={(e) => setSearchText(e.target.value)}
           />
-          <button className="searchBtn" onClick={handleSearch}>
+          <button
+            className="bg-purple-900 text-white h-8 m-2 px-10 border-2 border-solid hover:bg-white hover:text-purple-900 hover:border-purple-900"
+            onClick={handleSearch}
+          >
             Search
           </button>
-          <button className="clrBtn" onClick={clear}>
+          <button
+            className="bg-purple-900 text-white h-8 m-2 px-10 border-2 border-solid hover:bg-white hover:text-purple-900 hover:border-purple-900"
+            onClick={clear}
+          >
             Clear
           </button>
         </div>
         {/* {console.log(restaurants)} */}
-        <div className="cards">
+        <div className="flex m-8 flex-wrap justify-evenly">
           {restaurants.length == 0 ? (
             <Shimmer />
           ) : (
