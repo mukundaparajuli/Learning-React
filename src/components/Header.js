@@ -17,7 +17,7 @@ const Header = () => {
     login == "Logged In" ? setLogin("Logged Out") : setLogin("Logged In");
   };
   return (
-    <div className="flex justify-between bg-pink-100 shadow-lg h-32 sm:bg-blue-50 md:bg-yellow-200">
+    <div className="flex justify-between bg-pink-100 shadow-lg h-32">
       <Title />
       <div>
         <ul className="px-10 py-16 flex">

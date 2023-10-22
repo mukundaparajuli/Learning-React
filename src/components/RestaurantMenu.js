@@ -11,7 +11,7 @@ const RestaurantMenu = () => {
   return (
     <div className="flex justify-around">
       <div>
-        <div className="font-bold text-[32px] py-4">
+        <div className="font-bold text-[64px] py-4">
           {restaurant?.data?.cards[0]?.card?.card?.info?.name}
         </div>
         <img
@@ -21,8 +21,12 @@ const RestaurantMenu = () => {
           }
         />
         <p>Restaurant Id:{resId}</p>
-        <h3>{restaurant?.data?.cards[0]?.card?.card?.info?.city}</h3>
-        <h3>{restaurant?.data?.cards[0]?.card?.card?.info?.avgRating} Stars</h3>
+        <h3 className="font-bold text-[22px]">
+          {restaurant?.data?.cards[0]?.card?.card?.info?.city}
+        </h3>
+        <h3 className="font-bold text-[22px]">
+          {restaurant?.data?.cards[0]?.card?.card?.info?.avgRating} Stars
+        </h3>
       </div>
       <div>
         <div className="font-bold text-[40px]">MENU</div>

@@ -12,6 +12,8 @@ import Contacts from "./components/Contacts";
 // import Instamart from "./components/Instamart";
 import { lazy, Suspense } from "react";
 import Shimmer from "./components/Shimmerr";
+import { Provider } from "react-redux";
+import store from "./utils/store";
 
 // chunking
 // dynamic import
@@ -25,11 +27,12 @@ const About = lazy(() => import("./components/About"));
 
 const AppLayout = () => {
   return (
-    <React.Fragment>
+    <>
+      <Provider store={store} />
       <Header />
       <Outlet />
       <Footer />
-    </React.Fragment>
+    </>
   );
 };
 const appRouter = createBrowserRouter([
@@ -54,7 +57,7 @@ const appRouter = createBrowserRouter([
       },
       {
         path: "/",
-        element: <Body />,
+        element: <Body user={{ name: "Mukunda", id: 34343 }} />,
       },
       {
         path: "/contacts",

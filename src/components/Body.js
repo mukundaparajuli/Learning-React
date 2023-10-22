@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { filterData } from "../utils/helper";
 import useOnline from "../utils/useOnline";
 
-const Body = () => {
+const Body = ({ user }) => {
   const [searchText, setSearchText] = useState("");
   const [restaurants, setRestaurants] = useState([]);
   const [originalData, setOriginalData] = useState([]);
@@ -88,6 +88,7 @@ const Body = () => {
                   key={index}
                   {...restaurant?.info}
                   className="restaurantCard"
+                  user={user}
                 />
               </Link>
             ))
