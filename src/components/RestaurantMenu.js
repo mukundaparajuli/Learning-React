@@ -2,11 +2,18 @@ import { useParams } from "react-router-dom";
 import { IMG_CDN_URL } from "../Config";
 import useRestaurantMenu from "../utils/useRestaurantmenu";
 // import { useState, useEffect } from "react";
-
+import CartSlice, { addItem } from "../utils/CartSlice";
+import { useDispatch } from "react-redux";
 const RestaurantMenu = () => {
   const { resId } = useParams();
 
   const restaurant = useRestaurantMenu(resId);
+
+  const dispatch = useDispatch();
+  const handleAddItems = (items) => {
+    dispatch(addItem(items));
+    console.log(CartSlice.items);
+  };
 
   return (
     <div className="flex justify-around">
@@ -51,6 +58,14 @@ const RestaurantMenu = () => {
                   </td>
                   <td className=" border-black-300 border-2">
                     Rs {items?.card?.info?.price / 100}/-{" "}
+                  </td>
+                  <td>
+                    <button
+                      className="bg-green-100 px-3 py-3 border-black-300 border-2"
+                      onClick={() => handleAddItems(items)}
+                    >
+                      Add Item
+                    </button>
                   </td>
                 </tr>
               )

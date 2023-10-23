@@ -14,6 +14,7 @@ import { lazy, Suspense } from "react";
 import Shimmer from "./components/Shimmerr";
 import { Provider } from "react-redux";
 import store from "./utils/store";
+import Cart from "./components/Cart";
 
 // chunking
 // dynamic import
@@ -28,10 +29,11 @@ const About = lazy(() => import("./components/About"));
 const AppLayout = () => {
   return (
     <>
-      <Provider store={store} />
-      <Header />
-      <Outlet />
-      <Footer />
+      <Provider store={store}>
+        <Header />
+        <Outlet />
+        <Footer />
+      </Provider>
     </>
   );
 };
@@ -66,6 +68,10 @@ const appRouter = createBrowserRouter([
       {
         path: "/restaurant/:resId",
         element: <RestaurantMenu />,
+      },
+      {
+        path: "/cart",
+        element: <Cart />,
       },
       {
         path: "/instamart",

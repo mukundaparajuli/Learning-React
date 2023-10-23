@@ -245,6 +245,10 @@ img, video {
   margin: .5rem;
 }
 
+.m-3 {
+  margin: .75rem;
+}
+
 .m-4 {
   margin: 1rem;
 }
@@ -285,6 +289,10 @@ img, video {
   height: 400px;
 }
 
+.h-\[440px\] {
+  height: 440px;
+}
+
 .w-44 {
   width: 11rem;
 }
@@ -315,6 +323,10 @@ img, video {
 
 .justify-self-center {
   justify-self: center;
+}
+
+.overflow-hidden {
+  overflow: hidden;
 }
 
 .rounded-lg {
@@ -353,6 +365,16 @@ img, video {
   background-color: rgb(243 244 246 / var(--tw-bg-opacity));
 }
 
+.bg-green-100 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(220 252 231 / var(--tw-bg-opacity));
+}
+
+.bg-green-200 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(187 247 208 / var(--tw-bg-opacity));
+}
+
 .bg-pink-100 {
   --tw-bg-opacity: 1;
   background-color: rgb(252 231 243 / var(--tw-bg-opacity));
@@ -366,6 +388,21 @@ img, video {
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.bg-gray-200 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(229 231 235 / var(--tw-bg-opacity));
+}
+
+.bg-gray-900 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(17 24 39 / var(--tw-bg-opacity));
+}
+
+.bg-gray-400 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(156 163 175 / var(--tw-bg-opacity));
 }
 
 .p-1 {
@@ -390,9 +427,19 @@ img, video {
   padding-right: .5rem;
 }
 
+.px-3 {
+  padding-left: .75rem;
+  padding-right: .75rem;
+}
+
 .py-16 {
   padding-top: 4rem;
   padding-bottom: 4rem;
+}
+
+.py-3 {
+  padding-top: .75rem;
+  padding-bottom: .75rem;
 }
 
 .py-4 {
@@ -415,6 +462,14 @@ img, video {
   line-height: 2rem;
 }
 
+.text-\[16px\] {
+  font-size: 16px;
+}
+
+.text-\[22px\] {
+  font-size: 22px;
+}
+
 .text-\[32px\] {
   font-size: 32px;
 }
@@ -423,21 +478,21 @@ img, video {
   font-size: 40px;
 }
 
+.text-\[64px\] {
+  font-size: 64px;
+}
+
 .text-xl {
   font-size: 1.25rem;
   line-height: 1.75rem;
 }
 
-.text-\[64px\] {
-  font-size: 64px;
-}
-
-.text-\[22px\] {
-  font-size: 22px;
-}
-
 .font-bold {
   font-weight: 700;
+}
+
+.italic {
+  font-style: italic;
 }
 
 .text-white {
@@ -461,10 +516,6 @@ img, video {
 
 .hover\:rounded-xl:hover {
   border-radius: .75rem;
-}
-
-.hover\:border-2:hover {
-  border-width: 2px;
 }
 
 .hover\:border-purple-900:hover {

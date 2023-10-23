@@ -6,7 +6,7 @@ const RestaurantCard = ({
   avgRating,
 }) => {
   return (
-    <div className="m-4 w-[250px] h-[400px] rounded-xl hover:shadow-2xl hover:border-2 hover:border-gray p-4 hover:rounded-xl bg-white">
+    <div className="m-4 w-[250px] h-[400px] rounded-xl hover:shadow-2xl border-2 border-gray p-4 hover:rounded-xl bg-white">
       <div>
         <img
           src={IMG_CDN_URL + cloudinaryImageId}

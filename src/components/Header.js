@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import Instamart from "./Instamart";
+import { useSelector } from "react-redux";
 
 const Title = () => {
   return (
@@ -16,6 +17,8 @@ const Header = () => {
   const loginAndOut = () => {
     login == "Logged In" ? setLogin("Logged Out") : setLogin("Logged In");
   };
+  const cartItems = useSelector((store) => store.cart.items);
+  console.log(cartItems);
   return (
     <div className="flex justify-between bg-pink-100 shadow-lg h-32">
       <Title />
@@ -30,11 +33,11 @@ const Header = () => {
           <Link to="/contacts">
             <li className="px-2">Contacts</li>
           </Link>
-          <Link to="">
-            <li className="px-2">Cart</li>
-          </Link>
           <Link to="/instamart">
             <li className="px-2">Instamart</li>
+          </Link>
+          <Link to="/cart">
+            <li className="px-2">Cart- Items: {cartItems.length}</li>
           </Link>
         </ul>
       </div>
