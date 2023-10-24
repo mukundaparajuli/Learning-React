@@ -241,6 +241,14 @@ img, video {
   --tw-backdrop-sepia: ;
 }
 
+.bottom-0 {
+  bottom: 0;
+}
+
+.m-0 {
+  margin: 0;
+}
+
 .m-2 {
   margin: .5rem;
 }
@@ -259,6 +267,10 @@ img, video {
 
 .m-8 {
   margin: 2rem;
+}
+
+.box-border {
+  box-sizing: border-box;
 }
 
 .flex {
@@ -299,6 +311,10 @@ img, video {
 
 .w-\[250px\] {
   width: 250px;
+}
+
+.w-\[300px\] {
+  width: 300px;
 }
 
 .flex-wrap {
@@ -365,6 +381,11 @@ img, video {
   background-color: rgb(243 244 246 / var(--tw-bg-opacity));
 }
 
+.bg-gray-400 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(156 163 175 / var(--tw-bg-opacity));
+}
+
 .bg-green-100 {
   --tw-bg-opacity: 1;
   background-color: rgb(220 252 231 / var(--tw-bg-opacity));
@@ -390,19 +411,8 @@ img, video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
-.bg-gray-200 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(229 231 235 / var(--tw-bg-opacity));
-}
-
-.bg-gray-900 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(17 24 39 / var(--tw-bg-opacity));
-}
-
-.bg-gray-400 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(156 163 175 / var(--tw-bg-opacity));
+.p-0 {
+  padding: 0;
 }
 
 .p-1 {
@@ -460,6 +470,14 @@ img, video {
 .text-2xl {
   font-size: 1.5rem;
   line-height: 2rem;
+}
+
+.text-\[12px\] {
+  font-size: 12px;
+}
+
+.text-\[14px\] {
+  font-size: 14px;
 }
 
 .text-\[16px\] {

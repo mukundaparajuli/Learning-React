@@ -35929,6 +35929,7 @@ parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 const Footer = ()=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: " bg-gray-400 text-white bottom-0",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("hr", {}, void 0, false, {
                 fileName: "src/components/Footer.js",
@@ -35936,7 +35937,7 @@ const Footer = ()=>{
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "flex justify-center bg-gray-400 text-white",
+                className: "flex justify-center box-border p-0 m-0",
                 children: "This is a site developed by Mukunda Parajuli"
             }, void 0, false, {
                 fileName: "src/components/Footer.js",
@@ -35944,7 +35945,7 @@ const Footer = ()=>{
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "flex justify-center  bg-gray-400 text-white",
+                className: "flex justify-center ",
                 children: "\xa9 Mukunda Parajuli,2023"
             }, void 0, false, {
                 fileName: "src/components/Footer.js",
@@ -40603,19 +40604,19 @@ const FoodItems = ({ imageId, name, description, price, category })=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "flex",
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-            className: "m-4 w-[250px] h-[440px] rounded-xl hover:shadow-2xl border-2 border-gray p-4 hover:rounded-xl bg-white",
+            className: "m-4 w-[300px] h-[440px] flex justify-center rounded-xl hover:shadow-2xl border-2 border-gray p-4 hover:rounded-xl bg-white",
             children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
                         src: (0, _config.IMG_CDN_URL) + imageId,
-                        className: "w-44 h-44 justify-self-center align-self-middle"
+                        className: "w-44 h-44 flex justify-center"
                     }, void 0, false, {
                         fileName: "src/components/FoodItems.js",
                         lineNumber: 12,
                         columnNumber: 11
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
-                        className: "text-xl font-bold",
+                        className: "text-[16px] font-bold",
                         children: name
                     }, void 0, false, {
                         fileName: "src/components/FoodItems.js",
@@ -40623,7 +40624,7 @@ const FoodItems = ({ imageId, name, description, price, category })=>{
                         columnNumber: 11
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
-                        className: "text-[16px] font-bold",
+                        className: "text-[14px] font-bold",
                         children: [
                             "Rs ",
                             price / 100
@@ -40634,7 +40635,7 @@ const FoodItems = ({ imageId, name, description, price, category })=>{
                         columnNumber: 11
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
-                        className: "italic text-[16px]",
+                        className: "italic text-[14px]",
                         children: [
                             "Category: ",
                             category
@@ -40645,12 +40646,9 @@ const FoodItems = ({ imageId, name, description, price, category })=>{
                         columnNumber: 11
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                        className: "text-[16px] py-4 overflow-hidden",
-                        children: [
-                            "Description: ",
-                            description
-                        ]
-                    }, void 0, true, {
+                        className: "text-[12px] py-4 overflow-hidden",
+                        children: description
+                    }, void 0, false, {
                         fileName: "src/components/FoodItems.js",
                         lineNumber: 16,
                         columnNumber: 11
