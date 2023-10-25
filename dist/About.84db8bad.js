@@ -601,16 +601,21 @@ var prevRefreshSig = window.$RefreshSig$;
 $parcel$ReactRefreshHelpers$5b98.prelude(module);
 
 try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _profileClass = require("./ProfileClass");
-var _profileClassDefault = parcelHelpers.interopDefault(_profileClass);
-var _profile = require("./Profile");
-var _profileDefault = parcelHelpers.interopDefault(_profile);
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-class About extends (0, _reactDefault.default).Component {
+"use strict";
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.default = void 0;
+var _ProfileClass = _interopRequireDefault(require("8792e34638b5ea5a"));
+var _Profile = _interopRequireDefault(require("6caab5f42b77f65e"));
+var _react = _interopRequireDefault(require("bbc6d23085232c2d"));
+var _jsxRuntime = require("9aff5c9ea7aa2f6c");
+function _interopRequireDefault(obj) {
+    return obj && obj.__esModule ? obj : {
+        default: obj
+    };
+}
+class About extends _react.default.Component {
     constructor(props){
         super(props);
         console.log("Parent-Constructor");
@@ -622,95 +627,63 @@ class About extends (0, _reactDefault.default).Component {
     }
     render() {
         console.log("Parent-render");
-        return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        return /*#__PURE__*/ (0, _jsxRuntime.jsxs)("div", {
             children: [
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                /*#__PURE__*/ (0, _jsxRuntime.jsx)("h1", {
                     children: "About Us"
-                }, void 0, false, {
-                    fileName: "src/components/About.js",
-                    lineNumber: 18,
-                    columnNumber: 9
-                }, this),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                }),
+                /*#__PURE__*/ (0, _jsxRuntime.jsx)("p", {
                     children: "This is the Namaste Live Course on React. Today we are on the seventh chapter of our class and the name of the chapter is Finding the Path."
-                }, void 0, false, {
-                    fileName: "src/components/About.js",
-                    lineNumber: 19,
-                    columnNumber: 9
-                }, this),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _profileDefault.default), {}, void 0, false, {
-                    fileName: "src/components/About.js",
-                    lineNumber: 24,
-                    columnNumber: 9
-                }, this)
+                }),
+                /*#__PURE__*/ (0, _jsxRuntime.jsx)(_Profile.default, {})
             ]
-        }, void 0, true, {
-            fileName: "src/components/About.js",
-            lineNumber: 17,
-            columnNumber: 12
-        }, this);
+        });
     }
 }
-exports.default = About;
+var _default = exports.default = About;
 
   $parcel$ReactRefreshHelpers$5b98.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","./ProfileClass":"aeEz8","./Profile":"h0rtF","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"h0rtF":[function(require,module,exports) {
+},{"@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","8792e34638b5ea5a":"aeEz8","6caab5f42b77f65e":"h0rtF","bbc6d23085232c2d":"21dqq","9aff5c9ea7aa2f6c":"6AEwr"}],"h0rtF":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$b52a = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
 $parcel$ReactRefreshHelpers$b52a.prelude(module);
 
 try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _react = require("react");
-var _s = $RefreshSig$();
+"use strict";
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.default = void 0;
+var _react = require("ca75da1d2ded6327");
+var _jsxRuntime = require("78f4d6916d89a6e0");
 const Profile = (props)=>{
-    _s();
     const [count, setCount] = (0, _react.useState)(0);
     (0, _react.useEffect)(()=>{}, []);
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+    return /*#__PURE__*/ (0, _jsxRuntime.jsxs)("div", {
         children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+            /*#__PURE__*/ (0, _jsxRuntime.jsx)("h2", {
                 children: "Profile Functional Component"
-            }, void 0, false, {
-                fileName: "src/components/Profile.js",
-                lineNumber: 6,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+            }),
+            /*#__PURE__*/ (0, _jsxRuntime.jsxs)("h2", {
                 children: [
                     "Count:",
                     count
                 ]
-            }, void 0, true, {
-                fileName: "src/components/Profile.js",
-                lineNumber: 7,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+            }),
+            /*#__PURE__*/ (0, _jsxRuntime.jsx)("button", {
                 onClick: ()=>setCount(1),
                 children: "SetState"
-            }, void 0, false, {
-                fileName: "src/components/Profile.js",
-                lineNumber: 8,
-                columnNumber: 7
-            }, undefined)
+            })
         ]
-    }, void 0, true, {
-        fileName: "src/components/Profile.js",
-        lineNumber: 5,
-        columnNumber: 10
-    }, undefined);
+    });
 };
-_s(Profile, "/xL7qdScToREtqzbt5GZ1kHtYjQ=");
 _c = Profile;
-exports.default = Profile;
+var _default = exports.default = Profile;
 var _c;
 $RefreshReg$(_c, "Profile");
 
@@ -719,6 +692,6 @@ $RefreshReg$(_c, "Profile");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}]},["3EtMM","1xC6H"], null, "parcelRequire164e")
+},{"ca75da1d2ded6327":"21dqq","78f4d6916d89a6e0":"6AEwr","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}]},["3EtMM","1xC6H"], null, "parcelRequire164e")
 
 //# sourceMappingURL=About.84db8bad.js.map

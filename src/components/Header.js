@@ -2,11 +2,13 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import Instamart from "./Instamart";
 import { useSelector } from "react-redux";
+import Logo from "../utils/FoodVilla.png";
 
 const Title = () => {
   return (
     <img
-      src="https://files.yappe.in/place/full/food-villa-family-restaurant-hotel-4642683.webp"
+      data-testid="logo"
+      src={Logo}
       alt="FoodVilla"
       className="h-32 p-2 justify-center"
     />
@@ -37,7 +39,9 @@ const Header = () => {
             <li className="px-2">Instamart</li>
           </Link>
           <Link to="/cart">
-            <li className="px-2">Cart- Items: {cartItems.length}</li>
+            <li className="px-2" data-testid="cart">
+              Cart- Items: {cartItems.length}
+            </li>
           </Link>
         </ul>
       </div>

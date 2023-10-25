@@ -64,6 +64,7 @@ const Body = ({ user }) => {
           <button
             className="bg-purple-900 text-white h-8 m-2 px-10 border-2 border-solid hover:bg-white hover:text-purple-900 hover:border-purple-900"
             onClick={handleSearch}
+            data-testid="search-test"
           >
             Search
           </button>
